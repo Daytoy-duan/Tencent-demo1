@@ -1,0 +1,38 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/test"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffb900",
+    "navigationBarTitleText": "花钱最快乐",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "list":[
+    {
+      "pagePath": "./pages/index/index",
+      "text": "首页",
+      "iconPath": "./images/marker.png",
+      "selectedIconPath": "./images/marker_checked.png"
+    },
+    {
+      "text": "天气",
+      "iconPath": "./images/featured.png",
+      "selectedIconPath": "./images/featured-actived.png",
+      "pagePath": "./pages/logs/logs"
+    },
+    {
+      "text": "测试",
+      "iconPath": "./images/search.png",
+      "selectedIconPath": "./images/search-actived.png",
+      "pagePath": "./pages/test/test"
+    }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
