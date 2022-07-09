@@ -2,12 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/test/test"
+    "pages/test/test",
+    "pages/weather/weather"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#00b38a",
-    "navigationBarTitleText": "拉勾教育",
+    "navigationBarTitleText": "每日天气",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -24,7 +25,7 @@
       "text": "天气",
       "iconPath": "./images/featured.png",
       "selectedIconPath": "./images/featured-actived.png",
-      "pagePath": "pages/logs/logs"
+      "pagePath": "pages/weather/weather"
     },
     {
       "text": "测试",
@@ -34,6 +35,11 @@
     }]
 
   },
+  "permission": {
+    "scope.userLocation": {
+    "desc": "您的服务需要获取您的位置信息"
+    }
+    },
   "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
