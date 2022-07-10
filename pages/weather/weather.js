@@ -1,18 +1,52 @@
 // pages/weather/weather.js
+const API = require('../../utils/api')
 Page({
   data: {
-
+  altitude: null,
+  longitude: null,
+  markers: [],
+  icon: '../../images/marker.png',
+  threedays: []
   },
   onLoad(options) {
-    // 襄阳实时天气预报
-    wx.request({
-      method: 'GET',
-      url: 'https://devapi.qweather.com/v7/weather/now?location=101010100&key=9b4dab51fc444ee2817550140526f54f',
-      header: {
-        'content-type': 'application/json'
-      },
-      success(res) {
-        console.log(res)
+    wx.getLocation({
+      type: "wgs84",
+      // 襄阳实时天气预报
+      success: (res)=>  {
+        this.setData({
+          latitude: res.latitude,
+          longitude: res.longitude,
+          markers: {
+            id: 0,
+            latitude: res.latitude,
+            longitude: res.longitude,
+            width: 40,
+            height: 40,
+            callout: [{
+              'content': '我在这',
+              'display': 'ALWAYS',
+              'fontsize': '30rpx',
+              'padding': '8rpx',
+              'boxShadow': '0 0 5rpx #333',
+              'borderRadius': '4rpx'
+            }]
+          }
+        })
+        let data = {
+          location: res.longitude + "," + res.latitude 
+        }
+        API.threeedays(data).then((res) => {
+          console.log(res.data)
+          if (res.data.code === "200") {
+            this.setData({
+              threeedays: res.data.daily
+            })
+          } else {
+            wx.showToast({
+              title: '正在获取位置信息'
+            })
+          }
+        })
       }
     })
   },
