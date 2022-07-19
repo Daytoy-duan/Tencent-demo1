@@ -12,7 +12,7 @@ Page({
   // 事件处理函数
   bindViewTap() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '../logs/logs.js'
     })
   },
   onLoad() {

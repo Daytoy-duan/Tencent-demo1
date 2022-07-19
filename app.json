@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs",
     "pages/test/test",
     "pages/weather/weather"
   ],
@@ -17,20 +16,20 @@
     "position": "bottom",
     "list": [{
       "text": "首页",
-      "iconPath": "./images/marker.png",
-      "selectedIconPath": "./images/marker_checked.png",
+      "iconPath": "./static/images/marker.png",
+      "selectedIconPath": "./static/images/marker_checked.png",
       "pagePath": "pages/index/index"
     },
     {
       "text": "天气",
-      "iconPath": "./images/featured.png",
-      "selectedIconPath": "./images/featured-actived.png",
+      "iconPath": "./static/images/featured.png",
+      "selectedIconPath": "./static/images/featured-actived.png",
       "pagePath": "pages/weather/weather"
     },
     {
       "text": "测试",
-      "iconPath": "./images/search.png",
-      "selectedIconPath": "./images/search-actived.png",
+      "iconPath": "./static/images/search.png",
+      "selectedIconPath": "./static/images/search-actived.png",
       "pagePath": "pages/test/test"
     }]
 

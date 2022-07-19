@@ -39,7 +39,7 @@ Page({
           console.log(res.data)
           if (res.data.code === "200") {
             this.setData({
-              threeedays: res.data.daily
+              threedays: res.data.daily
             })
           } else {
             wx.showToast({
