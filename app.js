@@ -11,6 +11,15 @@ App({
       success: res => {
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
       }
+    }),
+    wx.getLocation({
+      type: "wgs84",
+      success: res => {
+        console.log(res)
+        wx.setStorageSync('latitude', res.latitude)
+        wx.setStorageSync('longitude', res.longitude)
+      },
+      
     })
   },
   globalData: {

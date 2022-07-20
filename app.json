@@ -1,8 +1,10 @@
 {
   "pages": [
+    "pages/weather/weather",
     "pages/index/index",
     "pages/test/test",
-    "pages/weather/weather"
+    "pages/looking/looking",
+    "pages/looking/look"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -27,10 +29,16 @@
       "pagePath": "pages/weather/weather"
     },
     {
-      "text": "测试",
+      "text": "新游",
       "iconPath": "./static/images/search.png",
       "selectedIconPath": "./static/images/search-actived.png",
       "pagePath": "pages/test/test"
+    },
+    {
+      "text": "寻找",
+      "iconPath": "./static/images/search-actived.png",
+      "selectedIconPath": "./static/images/nav_s.png",
+      "pagePath": "pages/looking/looking"
     }]
 
   },
